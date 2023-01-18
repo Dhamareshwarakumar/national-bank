@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.heading-light {
+    color: #fff;
+}
+
+.heading-dark {
+    color: #333;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #6977fc;
+}
+
+.btn-secondary {
+    color: #333;
+    background-color: #EFEFEF;
+}
+
+.btn-primary:hover {
+    background-color: #949EFF;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    padding-top: 42px;
+    margin: 24px;
+    position: relative;
+    min-width: 460px;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        min-width: 85%;
+    }
+}
+
+.card-legend {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4b5cf8;
+    border-radius: 50px;
+    padding: 12px 24px;
+
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.form-control {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #949EFF;
+    border-radius: 50px;
+    padding: 12px 24px;
+    margin: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-control:focus {
+    border: 2px solid #4b5cf8;
+}
+
+
+body {
+    background-color: #949EFF;
+    height: 100vh;
+}
+
+.back-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Account | National Bank</title>
+
+    <link rel="icon" href="./assets/rupee.png">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/create-account.css">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="./index.html"><button class="btn btn-secondary back-btn">Back</button></a>
+    <div class="card">
+        <div class="card-legend">Create Account</div>
+        <form action="./services/create-account.php" method="post">
+            <div class="form-group">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name">
+            </div>
+
+            <div class="form-group">
+                <input type="number" name="age" id="age" class="form-control" placeholder="Enter Age">
+            </div>
+
+            <div class="form-group">
+                <select name="gender" id="gender" class="form-control">
+                    <option value="" selected disabled>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <textarea name="address" id="address" cols="30" rows="5" class="form-control"
+                    placeholder="Enter Address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create Account" class="btn btn-primary btn-block" id="create-account">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const name = document.querySelector('#name');
+        const age = document.querySelector('#age');
+        const gender = document.querySelector('#gender');
+        const address = document.querySelector('#address');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            // Name Validation
+            if (name.value === '') {
+                alert('Name is required');
+                return;
+            } else if (name.value.length < 3) {
+                alert('Name must be at least 3 characters long');
+                return;
+            }
+
+            // Age Validation
+            if (age.value === '') {
+                alert('Age is required');
+                return;
+            } else if (age.value < 16) {
+                alert('Age must be 16 or above');
+                return;
+            }
+
+            // Gender Validation
+            if (gender.value === '') {
+                alert('Gender is required');
+                return;
+            } else if (gender.value !== 'male' && gender.value !== 'female') {
+                alert("Invalid Gender");
+                return;
+            }
+
+            // Address Validation
+            if (address.value === '') {
+                alert('Address is required');
+                return;
+            } else if (address.value.length < 10) {
+                alert('Address must be at least 10 characters long');
+                return;
+            }
+
+            form.submit();
+        })
+    </script>
+</body>
+
+</html>
